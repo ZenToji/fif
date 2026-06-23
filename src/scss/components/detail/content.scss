@@ -1,0 +1,135 @@
+.detail-content {
+  padding: 80px 0 56px;
+
+  @include small-tablet {
+    padding: 50px 0;
+  }
+
+  @include mobile {
+    padding: 40px 0;
+  }
+
+  &__container {
+    max-width: 940px;
+
+    @include small-tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    line-height: 178%;
+    color: var(--neutral-color-100);
+    margin: 0px;
+  }
+
+  &__subtitle {
+    margin: 56px 0 24px;
+    color: var(--neutral-color-100);
+
+    @include mobile {
+      margin: 30px 0 16px;
+    }
+  }
+}
+
+.author-card {
+  padding: 0px 0 160px;
+
+  @include small-tablet {
+    padding: 32px 0 60px;
+  }
+
+  @include mobile {
+    padding: 24px 0 50px;
+  }
+
+  &__container {
+    @include flex-align-center;
+    align-items: flex-start;
+    gap: 48px;
+    max-width: 940px;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__image-wrapper {
+    flex-shrink: 0;
+  }
+
+  &__image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &__top {
+    @include flex-align-center;
+    gap: 16px;
+    margin-bottom: 14px;
+
+    @include small-tablet {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__socials {
+    @include flex-align-center;
+    gap: 32px;
+  }
+
+  &__social-link {
+    @include flex-all-center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--neutral-color-30);
+    border-radius: 50%;
+    color: var(--neutral-color-100);
+    transition: border-color var(--transition), background-color var(--transition);
+
+    &:hover {
+      border-color: var(--neutral-color-100);
+      background-color: var(--neutral-color-100);
+      color: var(--neutral-color-10);
+    }
+  }
+
+  &__share-text {
+    font-size: 14px;
+    color: var(--neutral-color-100);
+  }
+
+  &__label {
+    display: block;
+    font-size: 14px;
+    color: var(--neutral-color-50);
+    margin-bottom: 16px;
+  }
+
+  &__name {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--neutral-color-100);
+    margin-bottom: 16px;
+
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+
+  &__role {
+    display: block;
+    font-size: 14px;
+    color: var(--neutral-color-50);
+    margin-bottom: 16px;
+  }
+
+  &__bio {
+    font-size: 16px;
+    line-height: 170%;
+    color: var(--neutral-color-100);
+    max-width: 650px;
+  }
+}

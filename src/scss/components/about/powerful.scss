@@ -1,0 +1,76 @@
+.about-powerful {
+  padding: 80px 0;
+
+  @include small-tablet {
+    padding: 50px 0;
+  }
+
+  @include mobile {
+    padding: 40px 0;
+  }
+
+  &__container {
+    @include flex-all-between;
+    gap: 40px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: var(--neutral-color-30);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: var(--neutral-color-30);
+    }
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: flex-start;
+
+      &::before {
+        top: -50px;
+      }
+
+      &::after {
+        bottom: -50px;
+      }
+    }
+
+    @include mobile {
+      &::before {
+        top: -40px;
+      }
+
+      &::after {
+        bottom: -40px;
+      }
+    }
+  }
+
+  &__title {
+    max-width: 480px;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+
+  &__desc {
+    max-width: 500px;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+}

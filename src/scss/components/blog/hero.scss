@@ -1,0 +1,27 @@
+.hero {
+  padding: 95px 0 128px;
+
+  @include small-tablet {
+    padding: 60px 0 40px;
+  }
+
+  @include mobile {
+    padding: 50px 0 30px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 53px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__subtitle {
+    max-width: 800px;
+  }
+}

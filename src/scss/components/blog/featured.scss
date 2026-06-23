@@ -1,0 +1,156 @@
+.featured {
+  background-color: var(--black-bg-color);
+  padding: 120px 0;
+
+  @include small-tablet {
+    padding: 60px 0;
+  }
+
+  @include mobile {
+    padding: 50px 0;
+  }
+
+  &__grid {
+    display: flex;
+    gap: 32px;
+
+    @include small-tablet {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 159px;
+    flex: 1;
+
+    @include small-tablet {
+      gap: 32px;
+    }
+  }
+
+  &__card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__card {
+    &-image {
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 24px;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+
+        @include small-tablet {
+          height: 260px;
+        }
+
+        @include mobile {
+          height: 220px;
+        }
+      }
+    }
+
+    &-title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 140%;
+      color: #fff;
+      margin-bottom: 16px;
+
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+
+    &-desc {
+      font-size: 16px;
+      line-height: 150%;
+      color: var(--neutral-color-50);
+
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__card-link--large &__card-image img {
+    width: 584px;
+    height: 751px;
+
+    @include small-tablet {
+      width: 100%;
+      height: 300px;
+    }
+
+    @include mobile {
+      width: 100%;
+      height: 240px;
+    }
+  }
+
+  &__card-link:nth-child(2) &__card-image img,
+  &__card-link:nth-child(3) &__card-image img {
+    width: 584px;
+    height: 507px;
+
+    @include small-tablet {
+      width: 100%;
+      height: 260px;
+    }
+
+    @include mobile {
+      width: 100%;
+      height: 220px;
+    }
+  }
+
+  &__card-link:nth-child(4) &__card-image img {
+    width: 584px;
+    height: 751px;
+
+    @include small-tablet {
+      width: 100%;
+      height: 260px;
+    }
+
+    @include mobile {
+      width: 100%;
+      height: 220px;
+    }
+  }
+
+  &__card-link--large &__card-title {
+    font-size: 28px;
+
+    @include mobile {
+      font-size: 22px;
+    }
+  }
+
+  &__col:nth-child(2) &__card-link:last-child {
+    margin-top: 44px;
+
+    @include small-tablet {
+      margin-top: 0;
+    }
+  }
+
+  &__col:nth-child(2) &__card-link:last-child &__card-image img {
+    height: 751px;
+
+    @include small-tablet {
+      height: 300px;
+    }
+
+    @include mobile {
+      height: 240px;
+    }
+  }
+}

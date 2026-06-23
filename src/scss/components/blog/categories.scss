@@ -1,0 +1,47 @@
+.categories {
+  padding: 0 0 80px;
+
+  @include small-tablet {
+    padding: 0 0 40px;
+  }
+
+  @include mobile {
+    padding: 0 0 30px;
+  }
+
+  &__list {
+    @include flex-align-center;
+    gap: 24px;
+    list-style: none;
+    overflow-x: auto;
+    padding-bottom: 4px;
+
+    @include mobile {
+      gap: 16px;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--neutral-color-150);
+    white-space: nowrap;
+    transition: color var(--transition);
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+
+    @include mobile {
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: var(--neutral-color-100);
+    }
+
+    &--active {
+      color: var(--neutral-color-100);
+      border-bottom-color: var(--neutral-color-100);
+    }
+  }
+}

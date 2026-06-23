@@ -1,0 +1,163 @@
+.posts {
+  padding: 0 0 168px;
+
+  @include small-tablet {
+    padding: 0 0 60px;
+  }
+
+  @include mobile {
+    padding: 0 0 50px;
+  }
+
+  &__slider {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__wrapper {
+    gap: 32px;
+  }
+
+  .swiper-slide {
+    margin: 0 !important;
+    width: 515px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .insight__slider-btns {
+    position: absolute;
+    top: 175px;
+    left: 506px;
+    z-index: 1;
+    pointer-events: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      top: auto;
+      bottom: 200px;
+      left: auto;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__card {
+    max-width: 515px;
+
+    &-image {
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 16px;
+
+      img {
+        width: 515px;
+        height: 428px;
+        object-fit: cover;
+
+        @include small-tablet {
+          height: 340px;
+        }
+
+        @include mobile {
+          height: 260px;
+          width: 100%;
+        }
+      }
+    }
+
+    &-meta {
+      @include flex-align-center;
+      gap: 16px;
+      margin-bottom: 24px;
+
+      span {
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--neutral-color-50);
+
+        @media (max-width: 325px) {
+          font-size: 10px;
+        }
+      }
+    }
+
+    &-title {
+      font-size: 29px;
+      font-weight: 600;
+      line-height: 140%;
+      color: var(--neutral-color-100);
+      margin-bottom: 16px;
+
+      @include mobile {
+        font-size: 22px;
+      }
+
+      @media (max-width: 325px) {
+        font-size: 10px;
+      }
+    }
+
+    &-title {
+      font-size: 29px;
+      font-weight: 600;
+      line-height: 140%;
+      color: var(--neutral-color-100);
+      margin-bottom: 16px;
+
+      @include mobile {
+        font-size: 22px;
+      }
+
+      @media (max-width: 325px) {
+        font-size: 12px;
+      }
+    }
+
+    &-desc {
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--neutral-color-150);
+      max-width: 332px;
+
+      @include mobile {
+        font-size: 16px;
+      }
+
+      @media (max-width: 325px) {
+        font-size: 12px;
+      }
+    }
+
+    &-desc {
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--neutral-color-150);
+      max-width: 332px;
+
+      @include mobile {
+        font-size: 16px;
+      }
+
+      @media (max-width: 325px) {
+        font-size: 10px;
+      }
+    }
+  }
+}

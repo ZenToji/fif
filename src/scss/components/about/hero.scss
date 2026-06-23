@@ -1,0 +1,15 @@
+.about-hero {
+  padding: 108px 0 118px;
+
+  @include small-tablet {
+    padding: 60px 0 40px;
+  }
+
+  @include mobile {
+    padding: 50px 0 30px;
+  }
+
+  &__title {
+    max-width: 959px;
+  }
+}

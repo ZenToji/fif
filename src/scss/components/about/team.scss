@@ -69,12 +69,26 @@
       }
 
       @include tablet {
-        display: none;
+        width: 60px;
+        height: 60px;
+
+        &::after {
+          width: 60px;
+          border-radius: 30px;
+        }
+
+        &:hover {
+          gap: 6px;
+        }
+
+        &:hover::after {
+          width: 120px;
+        }
       }
 
-      @include small-mobile {
-        top: 80px;
-        left: 93%;
+      @include small-tablet {
+        width: 50px;
+        height: 50px;
 
         &::after {
           width: 50px;
@@ -83,6 +97,31 @@
 
         &:hover::after {
           width: 100px;
+        }
+      }
+
+      @include mobile {
+        top: auto;
+        bottom: 200px;
+        left: auto;
+        right: 20px;
+      }
+
+      @include small-mobile {
+        width: 44px;
+        height: 44px;
+
+        &::after {
+          width: 44px;
+          border-radius: 22px;
+        }
+
+        &:hover {
+          gap: 4px;
+        }
+
+        &:hover::after {
+          width: 88px;
         }
       }
     }
@@ -114,6 +153,39 @@
         color: #fff;
         transform: scale(1.15);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      @include tablet {
+        flex: 0 0 30px;
+        width: 30px;
+        height: 30px;
+
+        svg {
+          width: 10px;
+          height: 10px;
+        }
+      }
+
+      @include small-tablet {
+        flex: 0 0 25px;
+        width: 25px;
+        height: 25px;
+
+        svg {
+          width: 8px;
+          height: 8px;
+        }
+      }
+
+      @include small-mobile {
+        flex: 0 0 22px;
+        width: 22px;
+        height: 22px;
+
+        svg {
+          width: 8px;
+          height: 8px;
+        }
       }
     }
 

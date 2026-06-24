@@ -1,1 +1,0 @@
-import{u as s,a as r}from"./burger-_zKCTRRL.js";import{S as e}from"./swiper-TYuW5yBs.js";const t=()=>{new e(".about-gallery__slider",{slidesPerView:"auto",spaceBetween:32,loop:!0,centeredSlides:!0,breakpoints:{993:{centeredSlides:!1}}}),new e(".about-team__slider",{slidesPerView:"auto",spaceBetween:32,loop:!0,centeredSlides:!0,breakpoints:{993:{centeredSlides:!1}}})};s();r();t();
